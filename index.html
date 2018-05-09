@@ -1,0 +1,109 @@
+<!-- Team 16 Bookstore (index.html) -->
+<!-- Author: Ben Holzhauer -->
+<!-- Class: CS 405G-001 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Team 16 Bookstore - Log In</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="scripts/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">Team 16 Bookstore</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li id="loginNav" class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/">Log In</a>
+                    </li>
+                    <li id="signupNav" class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/signup">Sign Up</a>
+                    </li>
+                    <li id="logoutNav" class="nav-item" style="display: none">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/">Log Out</a>
+                    </li>
+                </ul>
+                <ul id="features" class="navbar-nav ml-auto" style="display: none">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/search">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/order">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/review">Review</a>
+                    </li>
+                    <li id="historyNav" class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/history">History</a>
+                    </li>
+                    <li id="manageNav" class="nav-item" style="display: none">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/manage">Manage</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="login" class="container mt-4 pb-4">
+            <h3>Log In</h3>
+            <br>
+            <form method="POST" action="server.php">
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" class="form-control" id="email" name="email" maxlength=50 placeholder="YOUR EMAIL" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password*</label>
+                    <input type="password" class="form-control" id="password" name="password" maxlength=50 placeholder="YOUR PASSWORD" required>
+                </div>
+                <input type="hidden" name="loginForm">
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+            <br>
+            <p>Don't have an account?
+                <a href="/~bgho224/CS405G/web-app/signup">Sign up</a>
+            </p>
+        </div>
+
+        <div id="choices" class="container mt-4 pb-4" style="display: none">
+            <h3>Welcome!</h3>
+            <p>Make a selection below, or from the navigation bar.</p>
+            <br>
+            <a href="/~bgho224/CS405G/web-app/search">
+                <h5>Search for books</h5>
+            </a>
+            <br>
+            <a href="/~bgho224/CS405G/web-app/order">
+                <h5>Order books</h5>
+            </a>
+            <br>
+            <a href="/~bgho224/CS405G/web-app/review">
+                <h5>Review books</h5>
+            </a>
+            <br>
+            <a id="historyLink" href="/~bgho224/CS405G/web-app/history">
+                <h5>See order history</h5>
+            </a>
+            <br>
+            <hr>
+            <a id="manageLink" href="/~bgho224/CS405G/web-app/manage" style="display: none">
+                <h5>Manage bookstore</h5>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

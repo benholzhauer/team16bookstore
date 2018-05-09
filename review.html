@@ -1,0 +1,87 @@
+<!-- Team 16 Bookstore (review.html) -->
+<!-- Author: Ben Holzhauer -->
+<!-- Class: CS 405G-001 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Team 16 Bookstore - Review</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="scripts/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand">Team 16 Bookstore</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li id="loginNav" class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/">Log In</a>
+                    </li>
+                    <li id="signupNav" class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/signup">Sign Up</a>
+                    </li>
+                    <li id="logoutNav" class="nav-item" style="display: none">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/">Log Out</a>
+                    </li>
+                </ul>
+                <ul id="features" class="navbar-nav ml-auto" style="display: none">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/search">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/order">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/review">Review</a>
+                    </li>
+                    <li id="historyNav" class="nav-item">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/history">History</a>
+                    </li>
+                    <li id="manageNav" class="nav-item" style="display: none">
+                        <a class="nav-link" href="/~bgho224/CS405G/web-app/manage">Manage</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="review" class="container mt-4 pb-4">
+            <h3>Review books</h3>
+            <br>
+            <form method="POST" action="server.php">
+                <div class="form-group">
+                    <label for="book">Book*</label>
+                    <select class="form-control" id="book" name="book" required>
+                        <option>BOOK - AUTHOR</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating (from 1 to 5)*</label>
+                    <input type="number" class="form-control" id="rating" name="rating" min=1 max=5 placeholder="BOOK RATING" required>
+                </div>
+                <div class="form-group">
+                    <label for="review">Comments</label>
+                    <textarea rows=5 class="form-control" id="review" name="review" placeholder="YOUR COMMENTS"></textarea>
+                </div>
+                <input type="hidden" name="reviewForm">
+                <button type="submit" class="btn btn-primary">Write Review</button>
+            </form>
+            <br>
+            <p id="success" class="text-success" style="display: none">Thank you for your feedback!</p>
+        </div>
+    </div>
+</body>
+
+</html>
